@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthOtpController;
 use App\Models\Listing;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
@@ -52,3 +53,12 @@ Route::get('/login', [UserController::class, 'login'])
     ->middleware('guest');
 
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
+
+Route::get('/otp/mobile', [AuthOtpController::class, 'create']);
+
+Route::get('/otp/valid', [AuthOtpController::class, 'valid']);
+
+Route::post('/otp', [AuthOtpController::class, 'store']);
+
+Route::post('/otp/validateOTP', [AuthOtpController::class, 'validateOTP']);
+
