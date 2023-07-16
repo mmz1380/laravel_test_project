@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
         $user = User::factory()->create([
             'name' => 'John Doe',
             'email' => 'john@gmail.com',
+            'mobile_no' => '09163367749'
         ]);
 
         Listing::factory(9)->create([
@@ -27,7 +28,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // Listing::create([
-        //     'title' => 'Laravel Senior Developer', 
+        //     'title' => 'Laravel Senior Developer',
         //     'tags' => 'laravel, javascript',
         //     'company' => 'Acme Corp',
         //     'location' => 'Boston, MA',
@@ -47,7 +48,7 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         // Listing::create([
-        //     'title' => 'Laravel Developer', 
+        //     'title' => 'Laravel Developer',
         //     'tags' => 'laravel, vue, javascript',
         //     'company' => 'Wayne Enterprises',
         //     'location' => 'Gotham, NY',
